@@ -20,14 +20,35 @@
             android:textStyle="bold"
             android:text="Sign Up"
             />
-
+<!--form register-->
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/editTextEmail"
+            android:id="@+id/editTextUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginTop="200dp"
+            style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:inputType="text"
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@id/editTextUsername"
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
             >
 
@@ -49,6 +70,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
+            app:passwordToggleEnabled="true"
             style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
             >
 
@@ -56,12 +78,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
-                android:inputType="textEmailAddress"
+                android:inputType="textPassword"
                 >
 
             </com.google.android.material.textfield.TextInputEditText>
         </com.google.android.material.textfield.TextInputLayout>
-
+<!--Tombol register-->
         <com.google.android.material.button.MaterialButton
             android:layout_below="@id/editTextPassword"
             android:layout_width="200dp"
